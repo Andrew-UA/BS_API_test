@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "a3274315-74d0-448b-b704-de5ca5fd1579",
+		"name": "BS-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6126773"
+	},
+	"item": [
+		{
+			"name": "Set task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"device_id\": \"9da85783\",\n    \"task\": {\n        \"type\": \"SOme type\",\n        \"payload\": \"Some payload\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v0/devices/tasks/queue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v0",
+						"devices",
+						"tasks",
+						"queue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all devices tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"device_id\": \"Some_id\",\n    \"task\": {\n        \"type\": \"SOme type\",\n        \"payload\": \"Some payload\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v0/devices/tasks/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v0",
+						"devices",
+						"tasks",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get device tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"device_id\": \"Some_id\",\n    \"task\": {\n        \"type\": \"SOme type\",\n        \"payload\": \"Some payload\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v0/devices/:device_id/tasks/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v0",
+						"devices",
+						":device_id",
+						"tasks",
+						"list"
+					],
+					"variable": [
+						{
+							"key": "device_id",
+							"value": "9da85783"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clear device tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v0/devices/:device_id/tasks/clear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v0",
+						"devices",
+						":device_id",
+						"tasks",
+						"clear"
+					],
+					"variable": [
+						{
+							"key": "device_id",
+							"value": "f0689c1f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
